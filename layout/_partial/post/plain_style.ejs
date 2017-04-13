@@ -1,0 +1,48 @@
+        <!-- post -->
+        <div class="post_wrap z-depth-1">    
+            <!--title-->
+            <div class="post_title">
+                <h3 class="h3-responsive text-center"><%= post.title %></h3>
+                <div>
+                    <small>日期：<%- date(post.date, 'YYYY-MM-DD') %></small>
+                    <% if(post.categories.length !== 0) {%>
+                        <span>|</span>
+                        <small>分类：
+                             <% page.categories.forEach(function(category){%>
+                                <a href="<%- url_for(category.path) %>"><%= category.name %></a>
+                            <% }) %> 
+                        </small>
+                    <% } %>
+                    <% if(post.tags.length !== 0) {%>
+                        <span>|</span>
+                        <small>标签：
+                            <% page.tags.forEach(function(tag){%>
+                                <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+                            <% }) %> 
+                        </small>
+                    <% } %>
+                </div> 
+            </div>
+            <hr>
+            <!-- content -->
+            <div class="post_content">
+                <%- post.content %>
+            </div>
+        </div>
+        <!-- pre && next -->
+        <div class="prev_next_post">
+            <% if(post.prev==null) {%>
+                <% state='disabled' %>
+            <% }else{%>
+                <% state='' %>
+                <% href = post.prev.path %>
+            <% } %>
+            <a href="<%- url_for(href) %>" class="btn btn-outline-default waves-effect <%= state %>" role="button"><i class="fa fa-chevron-left left" aria-hidden="true"></i>prev</a>
+             <% if(post.next==null) {%>
+                <% state='disabled' %>
+            <% }else{ %>
+                <% state='' %>
+                <% href = post.next.path %>
+            <% } %>
+            <a href="<%- url_for(href) %>" class="btn btn-outline-default waves-effect <%= state %>" role="button">next<i class="fa fa-chevron-right right" aria-hidden="true"></i></a>
+        </div>

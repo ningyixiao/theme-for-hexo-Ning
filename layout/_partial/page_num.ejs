@@ -1,0 +1,17 @@
+ <div class="page_num">
+        <% for(var i = 1;i<=page.total;i++){ %>
+            <% var temp %>
+            <% if(i==1) {%>
+                <% temp = url_for() %>
+            <% }else{ %>
+                <% temp = url_for(config.pagination_dir + '/' + i) %>
+            <% } %>
+            <% var style %>
+            <% if(i == current) { %>
+                <% style='btn-default' %>
+            <% }else{ %>
+                <% style='btn-outline-default' %>
+            <% } %>
+            <a href="<%= temp %>" class="btn <%= style %>"><%= i %></a>
+        <% } %>
+</div>

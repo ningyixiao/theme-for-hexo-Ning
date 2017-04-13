@@ -1,0 +1,7 @@
+<div class="container main_body_sm">
+    <div class="list-group">
+    <% page.posts.forEach(function(post){ %>
+        <%- partial('_partial/article', {post: post}) %>
+    <% }) %>
+    </div>
+</div>
