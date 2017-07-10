@@ -1,4 +1,38 @@
-<div class="container main_body_sm">
-    <%- partial('page') %>
-    <%- partial('_partial/page_num',{page:page,current:page.current}) %>
+<div id="index_page" class="container main_body">
+    <div class="left_section">
+        <%- partial('page') %>
+        <%- partial('_partial/page_num',{page:page,current:page.current}) %>
+    </div>
+    <div class="right_section">
+        <div class="fix_area">
+            <div class="tags_wrap item_wrap">
+                <h6>标签</h6>
+                <div class="tag_list">
+                <% if(site.tags.length > 0){ %>
+                    <% site.tags.forEach(function(tag){%>
+                    <a href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+                    <% }) %>
+                <% }else{ %>
+                    暂无标签
+                <% } %>
+                </div>
+            </div>
+            <div class="categories_wrap item_wrap">
+                <h6>分类</h6>
+                <div class="category_list">
+                <% if(site.categories.length > 0){ %>
+                    <% site.categories.forEach(function(category){%>
+                    <a href="<%- url_for(category.path) %>"><%= category.name %></a>
+                    <% }) %>
+                <% }else{ %>
+                    暂无分类
+                <% } %>
+                </div>
+            </div>
+            <div class="motto_wrap item_wrap">
+                <h6>个性签名</h6>
+                <div class="motto">保持愚蠢。</div>
+            </div>
+        </div>
+    </div>
 </div>

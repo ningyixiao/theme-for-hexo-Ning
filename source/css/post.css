@@ -1,0 +1,127 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+}
+
+.header-wrap i {
+    color: rgba(0, 0, 0, .3);
+    font-size: 1.5em;
+}
+
+.header-wrap i:hover {
+    color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.header-wrap .return_btn {
+    position: absolute;
+    top: -3.5em;
+    left: -2em;
+}
+
+.main_body {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.main_body .left_section {
+    flex: 4;
+}
+
+.main_body .right_section {
+    flex: 1;
+    position: relative;
+}
+
+.main_body .right_section .right-fixed-wrap {
+    position: fixed;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-left: 2em;
+    color: #bbb;
+}
+.main_body .right_section .right-fixed-wrap:after{
+    content: "";
+    display: block;
+    /* 故意使宽度溢出，这样就看不到右侧的垂直滚动条了 */
+    width: 500px;
+}
+
+.main_body .right_section .right-fixed-wrap .toc_title {
+    display: inline-block;
+    border-top: 1px solid #e3e3e3;
+    padding: .8em 0;
+    margin: 0;
+}
+.main_body .right_section .right-fixed-wrap .toc_of_article a{
+    color: rgba(0,0,0,.3);
+}
+.main_body .right_section .right-fixed-wrap .toc_of_article a:hover{
+    color: rgba(0,0,0,.6);
+}
+.main_body .right_section .toc_of_article ol {
+    list-style: none;
+    margin: 0;
+}
+.main_body .right_section .toc_of_article ol.toc{
+    padding: 0;
+    font-size: 1em;
+}
+.main_body .right_section .toc_of_article ol.toc-child{
+    padding-left: 1.5em;
+    font-size: .8em;
+}
+.post_wrap {
+    padding: 2em;
+}
+
+.prev_next_post {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+.prev_next_post a {
+    margin: 0 5em;
+    border-radius: 10em;
+}
+
+.post_wrap .post_title>div {
+    text-align: center;
+}
+
+.post_wrap .post_title>div span {
+    padding: 0 0.5em;
+}
+
+.post_wrap .post_content {}
+
+/* 前后篇文章按钮 */
+.prev_next_post .btn.btn-outline-default{
+    border: 2px solid rgba(0,0,0,.6);
+    color: rgba(0,0,0,.8) !important;
+}
+
+/* 底部copyright样式 */
+
+.footer-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    color: rgba(0, 0, 0, .3);
+    padding: 1em 0;
+    border-top: 1px solid #efefef;
+}
+
+.footer-wrap a {
+    color: rgba(0, 0, 0, .6);
+}
+
+@media screen and (max-width:414px) {
+    .main_body {}
+    .prev_next_post a {
+        margin: 0 0.5em;
+    }
+}

@@ -1,7 +1,7 @@
 <div class="container main_body_sm">
-    <div class="list-group">
-    <% page.posts.forEach(function(post){ %>
-        <%- partial('_partial/article', {post: post}) %>
-    <% }) %>
+    <div>
+        <h4 style="color:rgba(0,0,0,.3);margin-bottom:1em;">分类：<%= page.category %></h4>
     </div>
+    <%- partial('page') %>
+    <%- partial('_partial/cate_page_num',{page:page,current:page.current,category:page.category}) %>
 </div>

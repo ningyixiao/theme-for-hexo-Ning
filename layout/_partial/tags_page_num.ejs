@@ -1,11 +1,11 @@
-<div data-total="<%= page.total %>" class="page_num">
+ <div data-total="<%= page.total %>" class="page_num">
         <a data-page="1" href="<%= url_for() %>" class="btn btn-outline-default goto_first_page">...</a>
         <% for(var i = 1;i<=page.total;i++){ %>
             <% var temp %>
             <% if(i==1) {%>
-                <% temp = url_for() %>
+                <% temp = url_for(config.tag_dir+'/'+tag) %>
             <% }else{ %>
-                <% temp = url_for(config.pagination_dir + '/' + i) %>
+                <% temp = url_for(config.tag_dir+'/'+tag+'/'+config.pagination_dir+'/'+ i) %>
             <% } %>
             <% var style %>
             <% if(i == current) { %>

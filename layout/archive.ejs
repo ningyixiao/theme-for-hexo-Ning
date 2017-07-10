@@ -9,9 +9,9 @@
                 <h3><span class="badge teal"><%= post.date.year() %></span></h3>
             </div>
             <div class="list-group">
-                <%- partial('_partial/article', {post: post}) %>
+                <%- partial('_partial/article_simple', {post: post}) %>
         <% }else{ %>
-            <%- partial('_partial/article', {post: post}) %>
+            <%- partial('_partial/article_simple', {post: post}) %>
         <% } %>
         <% last = post.date.year() %>
     <% }) %>

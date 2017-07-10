@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <% if (theme.favicon){ %>
-        <link rel="shortcut icon" type="image/x-icon" href="<%- theme.favicon %>">
+        <link rel="icon" href="<%- theme.favicon %>" type=" image/png">
     <% } %>
     <title><%= config.title %></title>
     <!-- Font Awesome -->
@@ -16,20 +16,25 @@
     <!-- Material Design Bootstrap -->
     <%- css('mdb/css/mdb.min.css') %>
     <!-- Your custom styles (optional) -->
-    <%- css('mdb/css/style.css') %>
+    <% if(is_post()){ %>
+    <%- css('css/post.css') %>
+    <%}else{%>
+    <%- css('css/layout.css') %>
+    <%}%>
 </head>
 
 <body>
 
     <!-- Start your project here-->
+    <% if(is_home()){ %>
     <!--Navbar-->
-    <nav class="navbar navbar-toggleable-md fixed-top navbar-dark teal">
+    <nav style="opacity: .8;" class="navbar navbar-toggleable-md fixed-top navbar-light white">
         <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<%- url_for('/') %>">
-                <strong>小宁师傅</strong>
+                <strong>ningyixiao</strong>
             </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav ml-auto">
@@ -49,21 +54,23 @@
             </div>
         </div>
     </nav>
+    <% }else{ %>
+    <header class="header-wrap">
+        <div class="container" style="padding: 0;">
+            <div class="return_btn"><i data-url="<%- url_for(site.url) %>
+" class="fa fa-times" aria-hidden="true"></i></div>
+        </div>
+    </header>
+    <% } %>
     <!-- for different templates -->
     <%- body %>
     <!--Footer-->
-    <footer class="page-footer fixed-bottom center-on-small-only">
-        <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2017 Ning Yixiao 
-                <span>|</span> 
-                <a href="https://www.MDBootstrap.com"> MDBootstrap</a>
-                <small>&&</small>
-                <a href="https://hexo.io">hexo</a>
-            </div>
-        </div>
-        <!--/.Copyright-->
+    <footer class="container footer-wrap">
+        <span>© 2017 Ning Yixiao</span> 
+        <span style="padding: 0 .5em;">|</span> 
+        <a href="https://www.MDBootstrap.com">MDBootstrap</a>
+        <span style="padding: 0 .1em;">&</span>
+        <a href="https://hexo.io">hexo</a>
     </footer>
     <!--/.Footer-->
 
@@ -78,6 +85,8 @@
     <%- js('mdb/js/bootstrap.min.js') %>
     <!-- MDB core JavaScript -->
     <%- js('mdb/js/mdb.min.js') %>
+    <!-- Your JavaScript -->
+    <%- js('js/layout.js') %>
 </body>
 
 </html>
