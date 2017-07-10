@@ -252,8 +252,8 @@ a.goto_first_page {
 
 @media screen and (max-width:414px) {
     .main_body_sm{
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin: 2em 0;
+        width: 100%;
     }
     .main_body {
         flex-direction: column;
