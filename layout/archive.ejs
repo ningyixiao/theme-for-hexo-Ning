@@ -2,9 +2,6 @@
     <% var last = 2000; %>
     <% site.posts.each(function(post, i){ %>
         <% if(post.date.year()!== last){ %>
-            <% if(last !== 2000) {%>
-                </div>
-            <% } %>
             <div class="title_list_group">
                 <h3><span class="badge teal"><%= post.date.year() %></span></h3>
             </div>
@@ -12,6 +9,12 @@
                 <%- partial('_partial/article_simple', {post: post}) %>
         <% }else{ %>
             <%- partial('_partial/article_simple', {post: post}) %>
+        <% } %>
+        <% if(post.date.year()!== last && i !== 0) {%>
+            </div>
+        <% } %>
+        <% if(i == site.posts.length-1) { %>
+            </div>
         <% } %>
         <% last = post.date.year() %>
     <% }) %>

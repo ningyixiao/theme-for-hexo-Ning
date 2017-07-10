@@ -120,7 +120,13 @@ body {
 }
 
 @media screen and (max-width:414px) {
-    .main_body {}
+    .main_body{
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+    .main_body .right_section {
+        display: none;
+    }
     .prev_next_post a {
         margin: 0 0.5em;
     }
