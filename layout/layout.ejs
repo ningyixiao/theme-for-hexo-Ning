@@ -8,7 +8,45 @@
     <% if (theme.favicon){ %>
         <link rel="icon" href="<%- theme.favicon %>" type=" image/png">
     <% } %>
-    <title><%= config.title %></title>
+    <% if(is_home()){ %>
+        <% if (config.title){ %>
+            <% if (config.subtitle){ %>
+        <title><%= config.subtitle %> - <%= config.title %></title>
+            <% }else{ %>
+        <title><%= config.title %></title>
+            <% } %>
+        <% } %>
+    <% } %>
+    <% if(is_archive()){ %>
+        <% if (config.title){ %>
+        <title>归档页 - <%= config.title %></title>
+        <% }else{ %>
+        <title>归档页</title>
+        <% } %>
+    <% } %>
+    <% if(is_tag()){ %>
+        <% if (config.title){ %>
+        <title>标签页 - <%= config.title %></title>
+        <% }else{ %>
+        <title>标签页</title>
+        <% } %>
+    <% } %>
+    <% if(is_category()){ %>
+        <% if (config.title){ %>
+        <title>分类页 - <%= config.title %></title>
+        <% }else{ %>
+        <title>分类页</title>
+        <% } %>
+    <% } %>
+    <% if(is_post()){ %>
+        <% if (config.title){ %>
+        <title>文章页 - <%= config.title %></title>
+        <% }else{ %>
+        <title>文章页</title>
+        <% } %>
+    <% } %>
+    <meta name="keywords" content="<%= config.keywords %>">
+    <meta name="description" content="<%= config.description %>">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -67,9 +105,9 @@
     <footer class="container footer-wrap">
         <span>© 2017 Ning Yixiao</span> 
         <span style="padding: 0 .5em;">|</span> 
-        <a href="https://www.MDBootstrap.com">MDBootstrap</a>
-        <span style="padding: 0 .1em;">&</span>
         <a href="https://hexo.io">hexo</a>
+        <span style="padding: 0 .1em;">&</span>
+        <a href="https://github.com/ningyixiao/theme-for-hexo-Ning">theme</a>
     </footer>
     <!--/.Footer-->
 

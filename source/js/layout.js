@@ -52,4 +52,10 @@ $(function() {
             return;
         }
     });
+
+    // 判断是否为post页面
+    if ($(".main_body").data("ispost") == true) {
+        var title = $(".post_title>h3").html();
+        $("title").html(title + " - " + "宁一笑的博客");
+    }
 })

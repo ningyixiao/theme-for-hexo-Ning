@@ -1,10 +1,17 @@
-# URL
-root: /
-permalink: :year/:month/:day/:title/
-
 # Header
 menu:
   Home: /
+
+# Miscellaneous
+favicon: /favicon.png
+
+# 使用该主题的时候请将以下的全部内容移到博客的配置文件中
+# 移动过程中记得去除重复项
+
+# URL
+root: /
+# permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 
 # Directory
 source_dir: source
@@ -13,6 +20,9 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 # code_dir: downloads/code
+# 忽略主体文件夹Ning下的img文件夹，该文件夹只为了集中管理上传到云服务器的图片 
+exclude:
+    - img/**
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -23,6 +33,23 @@ pagination_dir: page
 new_post_name: :title.md # File name of new posts
 default_layout: post
 
-# Miscellaneous
-favicon: /favicon.png
+# Plugins
+## Plugin hexo-autonofollow
+## Adds nofollow attribute to all external links in your hexo blog posts automatically.
+nofollow:
+  enable: true
+  exclude:
+    - yoursite.com
 
+## Plugin hexo-abbrlink
+## A Hexo plugin to generate static post link based on post titles.
+## abbrlink config
+abbrlink:
+  alg: crc16  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex
+
+# 自行安装以下两个插件
+## Plugin hexo-generator-sitemap
+### 自动生成sitemap
+sitemap:
+  path: sitemap.xml
