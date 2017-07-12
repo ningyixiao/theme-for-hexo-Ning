@@ -44,10 +44,15 @@
     </div>
     <div class="right_section">
         <div class="right-fixed-wrap">
-            <h5 class="toc_title">文章目录</h5>
-            <div class="toc_of_article">
-                <%- toc(post.content,{list_number:false}) %>
-            </div>    
+            <div class="toc_area">
+                <h5 class="toc_title">文章目录</h5>
+                <div class="toc_of_article">
+                    <%- toc(post.content,{list_number:false}) %>
+                </div>
+            </div>  
+            <div style="margin-top: 2em;" class="back_to_top">
+                <a style="color: #bbb;font-weight: 300;" href="#">Back to Top</a>
+            </div>   
         </div>    
     </div>
         
