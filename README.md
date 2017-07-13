@@ -1,5 +1,6 @@
-## How to get started
-> First of all, Make sure hexo is installed correctly. 
+## How to get started 
+Hexo主题效果图：[我的博客](http://blog.ningyixiao.com)
+> First of all, Make sure hexo is installed correctly.
 
 ### Step 1
     cd [blog folder]
@@ -35,5 +36,4 @@
 #### Plugin 2: [hexo-autonofollow](https://github.com/liuzc/hexo-autonofollow)
     npm install hexo-autonofollow --save
 #### Plugin 3: [hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
-    npm install hexo-generator-sitemap --save
-    
+    npm install hexo-generator-sitemap --save   
