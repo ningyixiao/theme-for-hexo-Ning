@@ -9,7 +9,7 @@ favicon: /favicon.png
 # 移动过程中记得去除重复项
 
 # URL
-root: /
+root: / 
 # permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink/
 

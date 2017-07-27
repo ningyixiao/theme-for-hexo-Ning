@@ -8,5 +8,3 @@ Allow: /page/
 Disallow: /js/
 Disallow: /css/
 Disallow: /mdb/
-
-Sitemap: http://blog.ningyixiao.com/sitemap.xml

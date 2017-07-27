@@ -261,5 +261,11 @@ a.goto_first_page {
     
     .list-group-item.has-box-shadow {
         margin-bottom: 0;
+        border: 0;
+        box-shadow: unset;
+        border-bottom: 1px dashed rgba(0,0,0,.6)
+    }
+    .list-group-item.has-box-shadow:first-child {
+        border-top: 1px dashed rgba(0,0,0,.6)
     }
 }
