@@ -280,6 +280,27 @@ table>tbody>tr>td {
 }
 
 @media screen and (max-width:992px) {
+    /* 令文章区域的宽度和body相同 */
+    .left_section{
+        width: 100%;
+    }
+    /* 小屏幕table不可查看 */
+    table{
+        display: none;
+    }
+    /* 同时设置table后面的p元素样式 */
+    table+p{
+        position: relative;
+        margin-top: 4rem;
+    }
+    table+p::before{
+        content: "请在电脑上查看表格内容";
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
     .main_body {
         margin-top: 0em;
         margin-bottom: 2em;
