@@ -21,8 +21,10 @@ archive_dir: archives
 category_dir: categories
 # code_dir: downloads/code
 # 忽略主体文件夹Ning下的img文件夹，该文件夹只为了集中管理上传到云服务器的图片 
+# 由于mdb比较大，可以考虑忽略主题文件夹Ning下的source/mdb文件夹，然后将该文件夹内容存放在cdn服务上
 exclude:
     - img/**
+#    - mdb/**
 
 # Pagination
 ## Set per_page to 0 to disable pagination
