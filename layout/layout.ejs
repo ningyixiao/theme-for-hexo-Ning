@@ -48,11 +48,11 @@
     <meta name="keywords" content="<%= config.keywords %>">
     <meta name="description" content="<%= config.description %>">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/css/bootstrap.min.css">
+    <%- css('mdb/css/bootstrap.min.css') %>
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/css/mdb.min.css">
+    <%- css('mdb/css/mdb.min.css') %>
     <!-- Your custom styles (optional) -->
     <% if(is_post()){ %>
     <%- css('css/post.css') %>
@@ -105,7 +105,7 @@
     <footer class="container footer-wrap">
         <span>© 2017 Ning Yixiao</span> 
         <span style="padding: 0 .5em;">|</span> 
-        <a href="https://hexo.io">hexo</a>
+        <a href="httpss://hexo.io">hexo</a>
         <span style="padding: 0 .1em;">&</span>
         <a href="https://github.com/ningyixiao/theme-for-hexo-Ning">theme</a>
     </footer>
@@ -115,39 +115,21 @@
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script src="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/js/jquery-3.1.1.min.js"></script>
+    <%- js('mdb/js/jquery-3.1.1.min.js') %>
     <!-- Bootstrap tooltips -->
-    <script src="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/js/tether.min.js"></script>
+    <%- js('mdb/js/tether.min.js') %>
     <!-- Bootstrap core JavaScript -->
-    <script src="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/js/bootstrap.min.js"></script>
+    <%- js('mdb/js/bootstrap.min.js') %>
     <!-- MDB core JavaScript -->
-     <script src="http://ningyixiao.b0.upaiyun.com/blog/vendor/mdb/js/mdb.min.js"></script>
+    <%- js('mdb/js/mdb.min.js') %>
     <!-- Your JavaScript -->
     <%- js('js/layout.js') %>
-    <!-- baidu zz -->
+    
     <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    <!-- baidu tongji -->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?5afcb4220f478f5a4beeaff4d043fe88";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
+    // 百度站长平台自动推送js代码
+    // ...
+    // 百度统计js代码
+    // ...
     </script>
 </body>
 
