@@ -1,5 +1,5 @@
 ## How to get started 
-Hexo主题效果图：[我的博客](http://blog.ningyixiao.com)
+Hexo主题效果图：[我的博客](https://blog.ningyixiao.com)
 > First of all, Make sure hexo is installed correctly.
 
 ### Step 1
